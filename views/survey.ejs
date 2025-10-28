@@ -1,0 +1,24 @@
+<%- include("header.ejs") %>
+
+<h1>Customer Survey</h1>
+
+<form action="/survey_result" method="POST">
+  First Name: <input type="text" name="first" required><br><br>
+  Surname: <input type="text" name="last" required><br><br>
+  Email: <input type="email" name="email" required><br><br>
+  Age: <input type="text" name="age" required><br><br>
+
+  <label>Which drinks do you consume?</label><br>
+  <% productCategories.forEach(category => { %>
+    <input type="radio" name="drink" value="<%= category %>"> <%= category %><br>
+  <% }) %>
+  <br>
+
+  <label>Are you a student?</label>
+  <input type="checkbox" name="student" value="Yes"><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<%- include("footer.ejs") %>
+

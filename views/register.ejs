@@ -1,0 +1,13 @@
+<%- include("header.ejs") %>
+
+<h1>Register for <%= shopName %></h1>
+
+<form method="POST" action="/registered">
+  First Name: <input type="text" name="first" required><br><br>
+  Last Name: <input type="text" name="last" required><br><br>
+  Email: <input type="email" name="email" required><br><br>
+  <input type="submit" value="OK">
+</form>
+
+<%- include("footer.ejs") %>
+

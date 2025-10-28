@@ -1,0 +1,14 @@
+<%- include("header.ejs") %>
+
+<h1>Contact <%= shopName %></h1>
+<p>Use the form below to send us a message:</p>
+
+<form method="POST" action="/contact">
+  Name: <input type="text" name="name" required><br><br>
+  Message: <textarea name="message" required></textarea><br><br>
+  <input type="submit" value="Send">
+</form>
+
+<%- include("footer.ejs") %>
+
+

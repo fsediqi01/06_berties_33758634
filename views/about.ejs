@@ -1,0 +1,14 @@
+<%- include("header.ejs") %>
+
+<h1>About <%= shopName %></h1>
+<p>We sell all sorts of drinks!</p>
+
+<h2>Our Shop Locations</h2>
+<ul>
+  <% shops.forEach(shop => { %>
+    <li><strong><%= shop.name %></strong> - Manager: <%= shop.manager %>, Address: <%= shop.address %></li>
+  <% }) %>
+</ul>
+
+<%- include("footer.ejs") %>
+

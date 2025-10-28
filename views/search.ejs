@@ -1,0 +1,27 @@
+<%- include("header.ejs") %>
+
+<h1>Search in <%= shopName %></h1>
+
+<form action="/search_result" method="GET">
+  <label>Product:</label>
+  <input type="text" name="search_text" required>
+  <label>Category:</label>
+  <input type="text" name="category">
+  <input type="submit" value="OK">
+</form>
+
+<% if (searchTerm) { %>
+  <h2>Search Results for "<%= searchTerm %>" in "<%= category %>":</h2>
+  <% if (results.length > 0) { %>
+    <ul>
+      <% results.forEach(item => { %>
+        <li><%= item %></li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No matching products found.</p>
+  <% } %>
+<% } %>
+
+<%- include("footer.ejs") %>
+
