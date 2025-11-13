@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bargain Books</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Bargain Books (Under £20)</h1>
+  <ul>
+    <% if (bargainBooks.length > 0) { %>
+      <% bargainBooks.forEach(book => { %>
+        <li><strong><%= book.name %></strong> — £<%= parseFloat(book.price).toFixed(2) %></li>
+      <% }) %>
+    <% } else { %>
+      <li>No bargain books available.</li>
+    <% } %>
+  </ul>
+  <p><a href="/">Return Home</a></p>
+</body>
+</html>
+
+
+

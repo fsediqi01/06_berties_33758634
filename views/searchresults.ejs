@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Search Results for "<%= keyword %>"</h1>
+  <ul>
+    <% if (searchResults.length > 0) { %>
+      <% searchResults.forEach(book => { %>
+        <li><strong><%= book.name %></strong> — £<%= parseFloat(book.price).toFixed(2) %></li>
+      <% }) %>
+    <% } else { %>
+      <li>No books found matching your search.</li>
+    <% } %>
+  </ul>
+  <p><a href="/">Return Home</a></p>
+</body>
+</html>
+
+
+

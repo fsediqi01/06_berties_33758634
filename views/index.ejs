@@ -1,14 +1,30 @@
-<%- include("header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Berties Book Shop</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Welcome to Berties Book Shop</h1>
+  <ul>
+    <li><a href="/books/list">View All Books</a></li>
+    <li><a href="/books/bargainbooks">Bargain Books</a></li>
+    <li><a href="/books/addbook">Add a Book</a></li>
+    <li>
+      <form action="/books/search" method="get">
+        <input type="text" name="keyword" placeholder="Search books...">
+        <button type="submit">Search</button>
+      </form>
+    </li>
+  </ul>
+</body>
+</html>
 
-<h1>Welcome to <%= shopName %> Shop</h1>
-<h2>Here are some things that we sell:</h2>
-<ul>
-  <% for (let i = 0; i < productCategories.length; i++) { %>
-    <li><%= productCategories[i] %></li>
-  <% } %>
-</ul>
 
-<%- include("footer.ejs") %>
+
+
+
 
 
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Books</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>All Available Books</h1>
+  <ul>
+    <% if (availableBooks.length > 0) { %>
+      <% availableBooks.forEach(book => { %>
+        <li><strong><%= book.name %></strong> — £<%= parseFloat(book.price).toFixed(2) %></li>
+      <% }) %>
+    <% } else { %>
+      <li>No books found.</li>
+    <% } %>
+  </ul>
+  <p><a href="/">Return Home</a></p>
+</body>
+</html>
+
+
+

@@ -1,20 +1,24 @@
 const express = require('express');
-const ejs = require('ejs');
 const app = express();
 const port = 8000;
 
-// Middleware to parse POST form data
+// Middleware
 app.use(express.urlencoded({ extended: true }));
-
-// Serve static files (CSS, JS, images)
 app.use(express.static('public'));
-
-// Set EJS as templating engine
 app.set('view engine', 'ejs');
 
-// Load routes
+// Routes
 const mainRoutes = require('./routes/main');
+const booksRoutes = require('./routes/books');
+
 app.use('/', mainRoutes);
+app.use('/books', booksRoutes);
 
 // Start server
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => {
+  console.log(`App running at http://localhost:${port}`);
+});
+
+
+
+
