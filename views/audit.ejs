@@ -1,0 +1,19 @@
+<h2>Audit Log</h2>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Success</th>
+    <th>Timestamp</th>
+  </tr>
+
+  <% logs.forEach(function(log) { %>
+    <tr>
+      <td><%= log.id %></td>
+      <td><%= log.username %></td>
+      <td><%= log.success ? "Success" : "Failed" %></td>
+      <td><%= log.timestamp %></td>
+    </tr>
+  <% }) %>
+</table>
