@@ -53,9 +53,10 @@ Your `.env` file should contain:
 
 ```
 DB_HOST=localhost
-DB_USER=asedi001
-DB_PASS=Berties2024!
+DB_USER=berties_books_app
+DB_PASS=qwertyuiop
 DB_NAME=berties_books
+
 ```
 
 ---
@@ -96,7 +97,7 @@ node index.js
 Open in browser:
 
 ```
-http://localhost:3000
+http://localhost:8000
 ```
 
 ---
@@ -155,7 +156,7 @@ Your submission must:
 ---
 
 ## 👤 Student Information
-**Name:** Ahmad  
+**Name:** Ahmad  Sediqi
 **Username:** `asedi001`  
 **Student ID:** 33758634  
 **Course:** Web Applications  
